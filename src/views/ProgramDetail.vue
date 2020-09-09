@@ -21,6 +21,9 @@
         >
       </span>
     </p>
+    <div id="back">
+      <router-link to="/program" id="backlink">BACK</router-link>
+    </div>
   </div>
 </template>
 
@@ -94,5 +97,27 @@ export default {
 #link-show:hover {
   border-bottom: 1px solid #ced019;
   color: #ced019;
+}
+
+#back {
+  display: flex;
+  width: 70px;
+  height: 30px;
+  border: 3px solid #eaeaea;
+  position: fixed;
+  top: 1.5vh;
+  left: 10px;
+}
+
+#back:hover {
+  border: 3px solid #ced019;
+}
+
+#backlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 </style>
