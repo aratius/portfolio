@@ -12,13 +12,27 @@
     <div id="contents">
       <router-view></router-view>
     </div>
+    <Loading v-show="loading" />
   </div>
 </template>
 
 <script>
+import Loading from "@/components/Loading.vue";
 export default {
   name: "App",
-  components: {},
+  data() {
+    return {
+      loading: true,
+    };
+  },
+  components: {
+    Loading,
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000);
+  },
 };
 </script>
 
